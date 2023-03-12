@@ -1,0 +1,7 @@
+# HT ACCESS KODLARININ YAZILACAGINI BELIRTTIK
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+#File name bir dosyaya denk gelmiyorsa
+RewriteCond %{REQUEST_FILENAME} !-d
+#File name bir klasöre denk gelmiyorsa
+RewriteRule ^(.*)^ index.php/$1 [L]
