@@ -6,4 +6,4 @@ $data = [
     "content" => "Trends content"
 ];
 
-require "view/storefront/pages/trends.view.php";
+ view("pages/trends.view.php", ['data' => $data]);

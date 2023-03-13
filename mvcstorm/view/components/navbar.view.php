@@ -20,6 +20,9 @@
             <li class="nav-item  <?= $uri === '/reverse' ? 'active' : '' ?>">
                 <a class="nav-link" href="reverse">Reverse</a>
             </li>
+            <li class="nav-item  <?= $uri === '/register' ? 'active' : '' ?>">
+                <a class="nav-link" href="register">Register</a>
+            </li>
         </ul>
     </div>
 </nav>

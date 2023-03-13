@@ -5,4 +5,4 @@ $data = [
     "content" => "404 content"
 ];
 
-require "view/storefront/pages/404.view.php";
+view("pages/404.view.php",compact('data'));

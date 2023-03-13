@@ -5,4 +5,4 @@ $data = [
     "content" => "Reverse text content"
 ];
 
-require "view/storefront/pages/reverse.view.php";
+view("pages/reverse.view.php", ['data' => $data]);

@@ -1,9 +1,10 @@
 <?php
 
 $routes = [
-    '/' => 'controller/storefront/home.php',
-    '/references' => 'controller/storefront/references.php',
-    '/trends' => 'controller/storefront/trends.php',
-    '/contact' => 'controller/storefront/contact.php',
-    '/reverse' => 'controller/storefront/reverse.php'
+    '/' => 'controller/home.php',
+    '/references' => 'controller/references.php',
+    '/trends' => 'controller/trends.php',
+    '/contact' => 'controller/contact.php',
+    '/reverse' => 'controller/reverse.php',
+    '/register' => 'controller/register.php',
 ];

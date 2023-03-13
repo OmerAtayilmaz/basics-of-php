@@ -5,5 +5,4 @@ $data = [
     'content' => 'HOME PAGE'
 ];
 
-
-require "view/storefront/pages/home.view.php";
+view("pages/home.view.php", compact("data"));

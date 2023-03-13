@@ -5,4 +5,4 @@ $data = [
     'content' => 'REFERENCES PAGE'
 ];
 
-require "view/storefront/pages/references.view.php";
+ view("pages/references.view.php", ['data' => $data]);
