@@ -2,8 +2,15 @@
 require "app/helpers/Path.php";
 require "app/helpers/Route.php";
 require "app/helpers/Omni.php";
+require "app/helpers/Methods.php";
+require "database/Database.php";
 
-$route = substr($_SERVER["REQUEST_URI"],32);
+$config = require "config/app.php";
+
+$route = substr($_SERVER["REQUEST_URI"],18);
+
+$db = new Database($config["database"]["mysql"]);
+
 $GLOBALS["routes"] = [
     "/" => [
         'name' => "home",
@@ -14,7 +21,6 @@ $GLOBALS["routes"] = [
         'file' => "products",
     ]
 ];
-
 if(array_key_exists($route,$GLOBALS["routes"])){
     $current = $GLOBALS["routes"][$route];
     require  "controller/" . $current['file'] . ".php";

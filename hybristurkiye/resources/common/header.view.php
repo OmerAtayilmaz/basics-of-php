@@ -4,6 +4,7 @@
     </head>
     <link rel="stylesheet" href="<?= Path::public('public/bootstrap.css') ?>" >
 </html>
+<body class="p-0 m-0">
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
