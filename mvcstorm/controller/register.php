@@ -1,9 +1,10 @@
 <?php
 use Core\Database;
 use Core\Validator;
+use Core\App;
 
-$config = require base_path("config/app.php");
-$db =new Database($config['database']);
+$db = App::resolve(Database::class);
+
 $validator = new Validator();
 $data = [
     "title" => "Register",

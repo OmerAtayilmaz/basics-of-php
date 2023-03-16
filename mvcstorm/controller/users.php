@@ -1,9 +1,9 @@
 <?php
 use Core\Database;
-use Models\User;
+use Core\App;
 
-$config = require base_path("config/app.php");
-$db = new Database($config['database']);
+$db = App::resolve(Database::class);
+
 $statement = $db->query("select * from users");
 $users = $statement->fetchAll(PDO::FETCH_ASSOC);
 if($_SERVER["REQUEST_METHOD"] == "POST"){
