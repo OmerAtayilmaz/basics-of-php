@@ -5,22 +5,25 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item <?= $uri === '/' ? 'active' : '' ?>">
+            <li class="nav-item <?= $_SERVER["REQUEST_URI"] === '/' ? 'active' : '' ?>">
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item  <?= $uri === '/references' ? 'active' : '' ?>">
+            <li class="nav-item  <?= $_SERVER["REQUEST_URI"]  === '/references' ? 'active' : '' ?>">
                 <a class="nav-link" href="references">References</a>
             </li>
-            <li class="nav-item  <?= $uri === '/trends' ? 'active' : '' ?>">
+            <li class="nav-item  <?= $_SERVER["REQUEST_URI"]  === '/trends' ? 'active' : '' ?>">
                 <a class="nav-link" href="trends">Trends</a>
             </li>
-            <li class="nav-item  <?= $uri === '/contact' ? 'active' : '' ?>">
+            <li class="nav-item  <?= $_SERVER["REQUEST_URI"]  === '/contact' ? 'active' : '' ?>">
                 <a class="nav-link" href="contact">Contact</a>
             </li>
-            <li class="nav-item  <?= $uri === '/reverse' ? 'active' : '' ?>">
+            <li class="nav-item  <?= $_SERVER["REQUEST_URI"]  === '/users' ? 'active' : '' ?>">
+                <a class="nav-link" href="users">Users</a>
+            </li>
+            <li class="nav-item  <?= $_SERVER["REQUEST_URI"]  === '/reverse' ? 'active' : '' ?>">
                 <a class="nav-link" href="reverse">Reverse</a>
             </li>
-            <li class="nav-item  <?= $uri === '/register' ? 'active' : '' ?>">
+            <li class="nav-item  <?= $_SERVER["REQUEST_URI"]  === '/register' ? 'active' : '' ?>">
                 <a class="nav-link" href="register">Register</a>
             </li>
         </ul>

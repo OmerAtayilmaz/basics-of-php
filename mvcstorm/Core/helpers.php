@@ -21,3 +21,8 @@ function base_path($path){
     extract($attributes);
     require base_path("view/" . $path);
 }
+function abort($code){
+    http_response_code($code);
+    require base_path("controller/404.php");
+    exit;
+}

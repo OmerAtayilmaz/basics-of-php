@@ -2,8 +2,7 @@
     <head>
         <title><?= _yield($data["title"],"default")?> </title>
     </head>
-    <link rel="stylesheet" href="<?= Path::public('public/bootstrap.css') ?>" >
-</html>
+    <link rel="stylesheet" href="<?= Path::public('public_html/bootstrap.css') ?>" >
 <body class="p-0 m-0">
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">

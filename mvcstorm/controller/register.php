@@ -1,7 +1,9 @@
 <?php
+use Core\Database;
+use Core\Validator;
+
 $config = require base_path("config/app.php");
-require base_path("Validator.php");
-$db = new Database($config['database']);
+$db =new Database($config['database']);
 $validator = new Validator();
 $data = [
     "title" => "Register",
@@ -9,8 +11,8 @@ $data = [
 ];
 
 
-
 if($_SERVER["REQUEST_METHOD"] === 'POST'){
+
 
     $errors = [];
     if(!$validator->requiredParams(["name","email","password","c-password"]))
@@ -24,8 +26,6 @@ if($_SERVER["REQUEST_METHOD"] === 'POST'){
 
     if($validator->isEmailUsed($_POST["email"]))
         $errors[] = "Email is already used!";
-
-
 
     if(empty($errors)){
         $db->query("INSERT INTO users (name, email, password, role) VALUES (:name, :email, :password, :role)",[

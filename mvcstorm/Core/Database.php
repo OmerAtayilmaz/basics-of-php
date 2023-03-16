@@ -1,4 +1,9 @@
 <?php
+
+namespace Core;
+use PDOStatement;
+use PDO;
+
 class Database {
 
     private $connection;
@@ -20,4 +25,6 @@ class Database {
 
         return $statement;
     }
+
+
 }

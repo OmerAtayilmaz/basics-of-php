@@ -1,4 +1,7 @@
 <?php
+namespace Core;
+use PDO;
+use Core\Database;
 
 class Validator{
     public function confirmPassword($pass,$cPass) : bool{
@@ -10,7 +13,8 @@ class Validator{
     }
 
     public function isEmailUsed($email){
-        global $db;
+        $config = require base_path("config/app.php");
+        $db =new Database($config['database']);
         $result = $db->query("select * from users where email = :email",[
             'email' => $email
         ])->fetch(PDO::FETCH_ASSOC);
