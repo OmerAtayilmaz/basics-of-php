@@ -1,4 +1,6 @@
 <?php
+namespace Model;
+use PDO;
 
 class Product{
     private $connection;
@@ -16,8 +18,6 @@ class Product{
     }
 
     public function find($id){
-        return $this->connection->query("select * from products where id = :product_id",[
-            "product_id" => $id
-        ])->fetch(PDO::FETCH_ASSOC);
+        return $this->connection->query("select * from products where id = 1")->fetch(PDO::FETCH_ASSOC);
     }
 }

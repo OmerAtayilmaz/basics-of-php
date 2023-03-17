@@ -4,7 +4,6 @@
 function isActive ($name,$class = null) : ?string{
 
         global $routes;
-
         if (!array_key_exists(baseUrl(), $routes))
             return '';
 
@@ -14,9 +13,10 @@ function isActive ($name,$class = null) : ?string{
             return $class ?? 'active';
 
         return '';
-    }
+}
 
-    function baseUrl() :string {
+function baseUrl() : string{
+        return $_SERVER["REQUEST_URI"];
+}
 
-        return "/" . substr($_SERVER["REQUEST_URI"],33);
-    }
+
