@@ -34,11 +34,7 @@
                                         <input type="hidden" name="user_id" value="<?=$product['id']?>"  />
                                         <button type="submit" class="btn btn-danger">Delete</button>
                                     </form>
-                                    <form method="get">
-                                        <input type="hidden" name="_method" value="GET" />
-                                        <input type="hidden" name="user_id" value="<?=$product['id']?>"  />
-                                        <button type="submit" class="btn btn-warning">Edit</button>
-                                    </form>
+                                    <a href="/product/edit?id=<?=$product['id']?>" class="btn btn-warning">Edit</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

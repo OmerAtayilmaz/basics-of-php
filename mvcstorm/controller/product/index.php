@@ -2,6 +2,7 @@
 
 use Core\Database;
 use Core\App;
+dd($_SESSION['user']);
 
 $db = App::resolve(Database::class);
 

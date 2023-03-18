@@ -3,7 +3,7 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item <?= $_SERVER["REQUEST_URI"] === '/' ? 'active' : '' ?>">
                 <a class="nav-link" href="/#">Home <span class="sr-only">(current)</span></a>
@@ -30,5 +30,10 @@
                 <a class="nav-link" href="/register">Register</a>
             </li>
         </ul>
+        <div class="authorization">
+            <div class="btn btn-success"><?=$_SESSION["user"]?></div>
+            <div class="btn btn-warning">Login</div>
+            <div class="btn btn-info">Register</div>
+        </div>
     </div>
 </nav>

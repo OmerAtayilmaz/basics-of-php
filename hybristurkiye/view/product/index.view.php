@@ -4,10 +4,9 @@
         <div class="col-12 p-2">
             <a class="btn btn-warning w-100" href="/product/create">CREATE</a>
         </div>
-        <div class="col-12  d-flex justify-content-center align-items-center">
             <!--product card -->
             <?php foreach ($data["products"] as $product) { ?>
-                <div class="col-4">
+                <div class="col-md-4 mb-2">
                     <div class="card h-100 w-100" style="width: 18rem;">
                         <img class="card-img-top" src="<?=$product['image']?>" alt="<?=$product['image']?>">
                         <div class="card-body">
@@ -19,7 +18,6 @@
                     </div>
                 </div>
             <?php } ?>
-        </div>
     </div>
 </main>
 <?php _include("common/footer"); ?>

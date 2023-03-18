@@ -9,5 +9,7 @@ $router->post("/register", "controller/register.php");
 $router->get("/users", "controller/users.php");
 
 $router->get("/product","controller/product/index.php");
+$router->post("/product","controller/product/store.php");
+$router->patch("/product","controller/product/update.php");
 $router->get("/product/create","controller/product/create.php");
-$router->post("/product/create","controller/product/store.php");
+$router->get("/product/edit","controller/product/edit.php");

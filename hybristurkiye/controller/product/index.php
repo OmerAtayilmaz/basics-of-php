@@ -1,9 +1,10 @@
 <?php
+
+use Core\App;
 use Core\Database;
 use Model\Product;
 
-$config = require base_path("config/app.php");
-$db = new Database($config["database"]["mysql"]);
+$db = $db = App::resolve(Database::class);
 
 $productList = new Product($db);
 $data = [

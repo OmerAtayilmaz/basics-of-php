@@ -1,6 +1,9 @@
 <?php
 // php -S localhost:8888 -t public
 
+//ilk başta session baslatılmalı
+session_start();
+
 use Core\Response;
 use Core\Database;
 use Core\Router;
@@ -21,7 +24,7 @@ $router = new Router();
 //bütün routelar load edilir.
 require base_path("routes.php");
 
-$uri =  $_SERVER['REQUEST_URI'];
+$uri =  parse_url($_SERVER['REQUEST_URI'])['path'];
 $method = $_POST["_method"] ?? $_SERVER['REQUEST_METHOD'];
 $router->route($uri, $method);
 
