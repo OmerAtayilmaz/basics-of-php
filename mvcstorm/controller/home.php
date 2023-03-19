@@ -1,6 +1,7 @@
 <?php
 //Sessions are not perminant!
-$_SESSION['user'] = "Omer Atayilmaz";
+//$_SESSION['user'] = "Omer Atayilmaz";
+//$_SESSION['password'] ="test1234";
 
 //php --info
 // session.save_path'i sonuclarda arat

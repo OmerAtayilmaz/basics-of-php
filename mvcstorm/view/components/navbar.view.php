@@ -26,14 +26,14 @@
             <li class="nav-item  <?= $_SERVER["REQUEST_URI"]  === '/reverse' ? 'active' : '' ?>">
                 <a class="nav-link" href="/reverse">Reverse</a>
             </li>
-            <li class="nav-item  <?= $_SERVER["REQUEST_URI"]  === '/register' ? 'active' : '' ?>">
-                <a class="nav-link" href="/register">Register</a>
-            </li>
         </ul>
         <div class="authorization">
-            <div class="btn btn-success"><?=$_SESSION["user"]?></div>
-            <div class="btn btn-warning">Login</div>
-            <div class="btn btn-info">Register</div>
+            <?php if($_SESSION["user"] ?? false) : ?>
+                <div class="btn btn-success"><?=$_SESSION["user"]["name"]?></div>
+            <?php else: ?>
+                <div class="btn btn-warning">Login</div>
+                <a class="btn btn-info" href="/register">Register</a>
+            <?php endif; ?>
         </div>
     </div>
 </nav>
